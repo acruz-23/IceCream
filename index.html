@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <div
+          class="col-md-9 col-lg-8 mx-auto">
+          <div class="card">
+            <div class="card-body p-5">
+                <h2><strong>Yum! Ice Cream</strong></h2>
+                <hr />
+                <label for="numOfScoops">Number of scoops:</label>
+                <input type="number" class="form-control" value="" id="numOfDays" /> <br />
+
+                <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="iceCreamContainer"
+                      id="cone"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Cone
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="iceCreamContainer"
+                      id="cup"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      up
+                    </label>
+                </div>
+                <hr>
+                <div class="options">
+                    <h3>Options</h3>
+                    <div class="row">
+                        <div class="col-sm-6 mx-auto">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="sprinkleOption"
+                            />
+                            <label class="form-check-label" for="sprinkleOptio"
+                              >Sprinkles ($0.50)</label
+                            >
+                        </div>
+                        <div class="col-sm-6 mx-auto">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="whippedCreamoption"
+                            />
+                            <label class="form-check-label" for="whippedCreamoption"
+                              >Whipped Cream ($0.25)</label
+                            >
+                        </div>
+                        <div class="col-sm-6 mx-auto">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="hotFudgeOption"
+                            />
+                            <label class="form-check-label" for="hotFudgeOption"
+                              >Hot Fudge ($1.25)</label
+                            >
+                        </div>
+                        <div class="col-sm-6 mx-auto">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="cherryOption"
+                            />
+                            <label class="form-check-label" for="cherryOption"
+                              >Cherry ($0.25)</label
+                            >
+                        </div>
+                    </div>
+                </div><br>
+                <button type="button" class="btn btn-primary" id="submitOrderBtn">Submit Order</button>
+                <hr>
+
+                <table>
+                    <tr>
+                    <td>Base Price: </td>
+                    <td> $<span id="basePrice"> XX XX</span></td>
+                    </tr>
+                    <tr>
+                    <td>Tax: </td>
+                    <td> $<span id="taxAdded"> XX XX</span></td>
+                    </tr>
+                    <tr>
+                    <td>Total Due: </td>
+                    <td> $<span id="ageSurcharge"> XX XX</span></td>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
+
+
