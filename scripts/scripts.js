@@ -9,6 +9,9 @@ submitOrderBtnEl.onclick = onsubmitOrderBtnClicked;
 
 function onRadioBtnsClicked() {
   console.log("onRadioBtnsClicked Started");
+  document.getElementById("basePrice").innerHTML = " XX XX";
+  document.getElementById("taxAdded").innerHTML = " XX XX";
+  document.getElementById("totalDue").innerHTML = " XX XX";
   const toppingOptions = document.getElementById("toppingOptions");
   const toppingSectionTitle = document.getElementById("toppingTitle");
   if (coneRadioBtnEl.checked) {
@@ -23,8 +26,15 @@ function onRadioBtnsClicked() {
 
 function onsubmitOrderBtnClicked() {
   console.log("onsubmitOrderBtnClicked Started");
-  // calc base ice cream cost
   const numOfScoops = +document.getElementById("numOfScoops").value;
+  //Error Messages
+  if (numOfScoops < 1 || numOfScoops > 4) {
+    alert("Number of Scoops Must be between 1 and 4!");
+    return;
+  }
+
+  // calc base ice cream cost
+
   let scoopPrice = 2.25 + (numOfScoops - 1) * 1.25;
   console.log("num of scoops ", numOfScoops);
   console.log("scoop price", scoopPrice);
