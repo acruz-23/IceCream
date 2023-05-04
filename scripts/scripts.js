@@ -1,22 +1,24 @@
 console.log("JS working");
 
 const submitOrderBtnEl = document.getElementById("submitOrderBtn");
-// const over25ChargeEl = document.getElementById("noRadioBtn");
-// const under25surcharge = document.getElementById("yesRadioBtn");
-// over25ChargeEl.onclick = onageSelectorElChecked;
-// under25surcharge.onclick = onageSelectorElChecked;
+const coneRadioBtnEl = document.getElementById("coneRadioBtn");
+const cupRadioBtnEl = document.getElementById("cupRadioBtn");
+cupRadioBtnEl.onclick = onRadioBtnsClicked;
+coneRadioBtnEl.onclick = onRadioBtnsClicked;
 submitOrderBtnEl.onclick = onsubmitOrderBtnClicked;
 
-function onageSelectorElChecked() {
-  console.log("onageSelectorElChecked Started");
+function onRadioBtnsClicked() {
+  console.log("onRadioBtnsClicked Started");
   const toppingOptions = document.getElementById("toppingOptions");
-  const surchageRow = document.getElementById("surchargeRow");
-  if (under25surcharge.checked) {
-    surchageRow.style.display = "table-row";
+  const toppingSectionTitle = document.getElementById("toppingTitle");
+  if (coneRadioBtnEl.checked) {
+    toppingOptions.style.display = "none";
+    toppingSectionTitle.innerHTML = "Toppings Only Available With Cups";
   } else {
-    surchageRow.style.display = "none";
+    toppingOptions.style.display = "flex";
+    toppingSectionTitle.innerHTML = "Toppings";
   }
-  console.log("onageSelectorElChecked finished");
+  console.log("onRadioBtnsClicked finished");
 }
 
 function onsubmitOrderBtnClicked() {
