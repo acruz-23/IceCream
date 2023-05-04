@@ -21,7 +21,7 @@
                 <h2><strong>Yum! Ice Cream</strong></h2>
                 <hr />
                 <label for="numOfScoops">Number of scoops:</label>
-                <input type="number" class="form-control" value="" id="numOfDays" /> <br />
+                <input type="number" class="form-control" value="" id="numOfScoops" required/> <br />
 
                 <div class="form-check">
                     <input
@@ -29,6 +29,7 @@
                       type="radio"
                       name="iceCreamContainer"
                       id="cone"
+                      checked
                     />
                     <label class="form-check-label" for="flexRadioDefault1">
                       Cone
@@ -42,12 +43,12 @@
                       id="cup"
                     />
                     <label class="form-check-label" for="flexRadioDefault1">
-                      up
+                      Cup
                     </label>
                 </div>
                 <hr>
                 <div class="options">
-                    <h3>Options</h3>
+                    <h3>Toppings</h3>
                     <div class="row">
                         <div class="col-sm-6 mx-auto">
                             <input
